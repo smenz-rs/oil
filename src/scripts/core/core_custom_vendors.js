@@ -34,8 +34,9 @@ function executeCustomVendorScript(scriptType, script, customVendor) {
       // for executed JavaScript function is global and not the scope of this function! We need this to enable the
       // executed script to set (global) variables that are reachable for other code snippets (i.e. for webtrekk) of
       // the website the opt-in layer is integrated in.
-      let evalFunction = eval;
-      evalFunction(script)
+      // let evalFunction = eval;
+      // evalFunction(script)
+      window[script]()
     } catch (error) {
       logError('Error occurred while executing ' + scriptType + ' script for custom vendor ' + customVendor.id + ' (' + customVendor.name + ')! Error was: ', error);
     }

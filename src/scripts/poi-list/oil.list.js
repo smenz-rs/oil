@@ -44,7 +44,7 @@ export const listSnippet = (list) => {
   let listWrapped = list.map((element) => {
     if (typeof element === 'object') {
       return `<div class="as-oil-third-party-list-element">
-                <span onclick='${OIL_GLOBAL_OBJECT_NAME}._toggleViewElements(this)'>
+                <span class="view-element">
                     <svg class='as-oil-icon-plus' width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.675 4.328H10v1.344H5.675V10h-1.35V5.672H0V4.328h4.325V0h1.35z" fill="#0068FF" fill-rule="evenodd" fill-opacity=".88"/>
                     </svg>
